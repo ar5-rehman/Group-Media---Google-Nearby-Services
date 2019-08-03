@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ImageView createButton,joinButton;
     Button playMusic;
-    String check;
+    String check,check1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent audioIntent = getIntent();
         check = audioIntent.getStringExtra("check");
-
+        check1 = check;
         createButton.setOnClickListener(this);
         joinButton.setOnClickListener(this);
         playMusic.setOnClickListener(this);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
             case R.id.joinButton:
-                if (check.equals("audio")) {
+                if (check1.equals("audio")) {
                     Intent i = new Intent(this,AudioActivity.class);
                     i.putExtra("create","join");
                     startActivity(i);
