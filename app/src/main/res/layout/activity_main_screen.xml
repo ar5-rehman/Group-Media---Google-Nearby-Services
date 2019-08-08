@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad"
+    tools:context=".MainScreenActivity">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/splashicon"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/first"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="wrap_content"
+        android:text="Super Volume Booster and Player"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/icon"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/second"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="wrap_content"
+        android:text="Increase your sound volume and enjoy"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/first"
+        android:textColor="#D7FFFFFF"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textStyle="italic"/>
+    <Button
+        android:id="@+id/audioBtn"
+        android:layout_width="303dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAllCaps="false"
+        android:background="@drawable/roundbutton"
+        android:text="Music Group"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/second"
+        android:layout_marginTop="95dp"/>
+
+    <Button
+        android:id="@+id/videoBtn"
+        android:layout_width="303dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAllCaps="false"
+        android:background="@drawable/roundbutton"
+        android:text="Video Group"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/audioBtn"
+        android:layout_marginTop="25dp"/>
+
+
+
+
+
+</RelativeLayout>

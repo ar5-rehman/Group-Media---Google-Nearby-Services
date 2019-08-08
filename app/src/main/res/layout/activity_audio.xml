@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".AudioActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        tools:ignore="UselessParent">
+
+
+        <RelativeLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom">
+
+            <ImageView
+                android:id="@+id/artist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/art" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/oval_tapbar"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:background="@drawable/buttons"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/splashicon"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/first"
+                    android:layout_width="@dimen/_230sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Super Volume Booster and Player"
+                    android:layout_marginTop="15dp"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:layout_below="@+id/icon"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="italic"/>
+
+                <TextView
+                    android:id="@+id/second"
+                    android:layout_width="@dimen/_230sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Increase your sound volume and enjoy"
+                    android:layout_marginTop="0dp"
+                    android:textSize="10sp"
+                    android:layout_below="@+id/first"
+                    android:textColor="#D7FFFFFF"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="italic"/>
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttons"
+                    android:src="@drawable/logout" />
+
+                <TextView
+                    android:id="@+id/logouttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logout"
+                    android:layout_alignParentRight="true"
+                    android:textSize="10sp"
+                    android:text="Log Out"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/connectedOrNot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logouttext"
+                    android:layout_alignParentRight="true"
+                    android:text="Not connected to any group"
+                    android:textColor="#ffffff"
+                    android:textSize="9sp"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/usersList"
+                    android:background="@drawable/buttons"
+                    android:tooltipText="Devices"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/userbtn"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ff5858"
+            android:padding="10dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:max="100"/>
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:text=""
+                android:layout_marginTop="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"/>
+
+            <TextView
+                android:id="@+id/currentPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"/>
+
+            <ImageView
+                android:id="@+id/listofSongs"
+                android:layout_width="wrap_content"
+                android:layout_height="23dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/duration"
+                android:background="@drawable/buttons"
+                android:src="@drawable/que"
+                android:tooltipText="Mp3 list" />
+
+            <LinearLayout
+                android:id="@+id/musicBarLinearLayout"
+                android:layout_width="391dp"
+                android:layout_height="253dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/songName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:text="The song name is this oooh"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/prev"
+                        android:layout_width="50dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="@dimen/_39sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/buttons"
+                        android:src="@drawable/prev"
+                        />
+
+                    <ImageView
+                        android:id="@+id/play"
+                        android:layout_width="64dp"
+                        android:layout_height="60dp"
+                        android:layout_alignRight="@+id/next"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="37dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginRight="79dp"
+                        android:layout_toRightOf="@+id/prev"
+                        android:background="@drawable/buttons"
+                        android:src="@drawable/play" />
+
+                    <ImageView
+                        android:id="@+id/next"
+                        android:layout_width="50dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_39sdp"
+                        android:background="@drawable/buttons"
+                        android:src="@drawable/forward"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

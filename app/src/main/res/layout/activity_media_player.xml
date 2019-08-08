@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MediaPlayerActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#ff5858"
+        app:title="Music Player"
+        app:titleTextColor="#ffffff"
+        >
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--<RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#ff5858">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="147dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:text="Music Player"
+            android:textColor="#ffffff"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/sear"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            />
+
+    </RelativeLayout>
+-->
+
+    <RelativeLayout
+        android:id="@+id/recycle_relative"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/constraintLayout2"
+        android:background="@drawable/grad">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grad"
+        android:scrollbars="vertical"
+        />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#EBF3693F"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="61dp"
+            android:layout_height="52dp"
+            android:src="@drawable/play"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="61dp"
+            android:layout_height="52dp"
+            android:src="@drawable/muisc"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/song1"
+            android:layout_width="159dp"
+            android:layout_height="24dp"
+            android:text="Song"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView1"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/size1"
+            android:layout_width="92dp"
+            android:layout_height="24dp"
+            android:text="Size"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@+id/imageView1"
+            android:layout_below="@+id/song1"
+            android:textSize="10sp"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
