@@ -123,7 +123,6 @@ public class MediaPlayerActivity extends AppCompatActivity implements View.OnCli
                 sortOrder);
         if (cursor == null) {
 
-            Toast.makeText(this, "Something Went Wrong.", Toast.LENGTH_LONG);
 
         } else if (!cursor.moveToFirst()) {
 
